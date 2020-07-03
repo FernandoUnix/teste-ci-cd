@@ -21,6 +21,8 @@ RUN curl -L https://github.com/docker/compose/releases/download/1.16.1/docker-co
     && chmod +x /usr/local/bin/docker-compose
 
 # give jenkins docker rights
+#RUN usermod -aG docker jenkins
 RUN usermod -aG docker jenkins
+RUN usermod -aG root jenkins
 
 USER jenkins
